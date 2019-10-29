@@ -17,7 +17,4 @@
 
 ## 결과 ### **Top Module 의 DUT/TestBench Code 및 Waveform 검증**
 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzYwMTgyMzhdfQ==
--->
+![](https://github.com/NaNaworld00/LogicDesign/commit/990f96ee65392950862a207d2331558c50503496)
