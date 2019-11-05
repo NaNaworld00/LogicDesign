@@ -43,3 +43,4 @@ eyJoaXN0b3J5IjpbLTcwODY5MTk0XX0=
 
 ![](https://github.com/NaNaworld00/LogicDesign/blob/master/Practice06/figs/IMG_0625.jpg)
 ![](https://github.com/NaNaworld00/LogicDesign/blob/master/Practice06/figs/IMG_0626.jpg)
+![](https://github.com/NaNaworld00/LogicDesign/blob/master/Practice06/figs/IMG_0628.jpg)
