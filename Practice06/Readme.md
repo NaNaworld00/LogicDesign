@@ -40,3 +40,5 @@ assign       six_digit_seg = { 3{seg_left, seg_right} }
 eyJoaXN0b3J5IjpbLTcwODY5MTk0XX0=
 -->
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
+
+![](https://github.com/NaNaworld00/LogicDesign/blob/master/Practice06/figs/IMG_0625.jpg)
