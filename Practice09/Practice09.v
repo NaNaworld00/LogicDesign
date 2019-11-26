@@ -340,17 +340,17 @@ ir_rx	u_ir(
 
 wire	[6:0]	seg_0		;
 fnd_dec	u_fnd_dec_0(
-	.i_num( data[3:0]		),
+	.i_num( data[3:0]	),
 	.o_seg( seg_0		));
 
 wire	[6:0]	seg_1		;
 fnd_dec	u_fnd_dec_1(
-	.i_num( data[7:4]		),
+	.i_num( data[7:4]	),
 	.o_seg( seg_1		));
 
 wire	[6:0]	seg_2		;
 fnd_dec	u_fnd_dec_2(
-	.i_num( data[11:8]		),
+	.i_num( data[11:8]	),
 	.o_seg( seg_2		));
 
 wire	[6:0]	seg_3		;
