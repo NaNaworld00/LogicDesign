@@ -23,4 +23,4 @@
 
 ### **Top module의 DUT/Testbench Code 및 Waveform 검증**
 
-![]([https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG])(https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG)
+![](https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG)
