@@ -1,26 +1,26 @@
 # Lab 09
 
-## ½Ç½À ³»¿ë
+## ì‹¤ìŠµ ë‚´ìš©
 
-### **IR CONTROLLER (°³º°)**
+### **IR CONTROLLER (ê°œë³„)**
 
-#### **Module ¼³¸í**
+#### **Module ì„¤ëª…**
 
-#### **ir_rx** : IR ¸®¸ğÄÁÀÇ ¼Û½Å ½ÅÈ£¸¦  ¼ö½ÅÇÏ°í, 32ºñÆ®ÀÇ Custom&DataCode Ãâ·Â
+#### **ir_rx** : IR ë¦¬ëª¨ì»¨ì˜ ì†¡ì‹  ì‹ í˜¸ë¥¼  ìˆ˜ì‹ í•˜ê³ , 32ë¹„íŠ¸ì˜ Custom&DataCode ì¶œë ¥
 
-#### **fnd_dec** : 32ºñÆ® Custom&DataCode¸¦ °¢°¢ 4 bit¾¿ ÇÒ´ç¹Ş¾Æ °¢ LED(6°³)ÀÇ 7 bit segment °ª Ãâ·Â
+#### **fnd_dec** : 32ë¹„íŠ¸ Custom&DataCodeë¥¼ ê°ê° 4 bitì”© í• ë‹¹ë°›ì•„ ê° LED(6ê°œ)ì˜ 7 bit segment ê°’ ì¶œë ¥
 
-#### **led_disp** : fnd_dec¿¡¼­ Ãâ·ÂÇÑ segment °ªÀ» ÀÔ·Â¹Ş¾Æ 6°³ LED ÀüºÎ displayµÇµµ·Ï ÇÔ
+#### **led_disp** : fnd_decì—ì„œ ì¶œë ¥í•œ segment ê°’ì„ ì…ë ¥ë°›ì•„ 6ê°œ LED ì „ë¶€ displayë˜ë„ë¡ í•¨
 
-#### **Top module** : ir_rx, fnd_dec, led_disp moduleÀ» È°¿ëÇÏ¿© ½Ç½ÀÀåºñÀÇ LED¿¡ ¸Â´Â Display Module ¼³°è
+#### **Top module** : ir_rx, fnd_dec, led_disp moduleì„ í™œìš©í•˜ì—¬ ì‹¤ìŠµì¥ë¹„ì˜ LEDì— ë§ëŠ” Display Module ì„¤ê³„
 
-### FPGA ½Ç½À : IR ¸®¸ğÄÁ ¹öÆ°À» ´­·¶À» ¶§ 6°³ÀÇ LED¿¡ ±×¿¡ »óÀÀÇÏ´Â 24ºñÆ® µ¥ÀÌÅÍ display
+### FPGA ì‹¤ìŠµ : IR ë¦¬ëª¨ì»¨ ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ 6ê°œì˜ LEDì— ê·¸ì— ìƒì‘í•˜ëŠ” 24ë¹„íŠ¸ ë°ì´í„° display
 
-: ¸®¸ğÄÁ ¹öÆ°À» ¹Ù²ã°¡¸ç ¸ğµç µ¥ÀÌÅÍ°¡ ¹Ù¸£°Ô displayµÇ´ÂÁö È®ÀÎ
+: ë¦¬ëª¨ì»¨ ë²„íŠ¼ì„ ë°”ê¿”ê°€ë©° ëª¨ë“  ë°ì´í„°ê°€ ë°”ë¥´ê²Œ displayë˜ëŠ”ì§€ í™•ì¸
 
 
-## °á°ú
+## ê²°ê³¼
 
-### **Top moduleÀÇ DUT/Testbench Code ¹× Waveform °ËÁõ**
+### **Top moduleì˜ DUT/Testbench Code ë° Waveform ê²€ì¦**
 
-![]([https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG](https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG)
+![]([https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG])(https://raw.githubusercontent.com/NaNaworld00/LogicDesign/master/Practice09/fig/%EC%BA%A1%EC%B2%98.PNG)
