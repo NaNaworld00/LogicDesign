@@ -1423,16 +1423,22 @@ always @ (*) begin
                o_sec = sec;
                o_min = min;
                o_hou = hou + 6'd14 ;
+		    if(o_hou >= 6'd24) begin
+			    o_hou <= o_hou - 6'24 ;
             end
             WOR_ENG : begin   //TIME OF ENGLAND --> TIME DIFFERENCE OF 9 HOUR
                o_sec = sec;
                o_min = min;
                o_hou = hou + 6'd09 ;
+		    if(o_hou >= 6'd24) begin
+			    o_hou <= o_hou - 6'24 ;
             end
             WOR_AUS : begin   //TIME OF AUSTRALIA --> TIME DIFFERENCE OF 2 HOUR
                o_sec = sec;
                o_min = min;
                o_hou = hou + 6'd02 ;
+		    if(o_hou >= 6'd24) begin
+			    o_hou <= o_hou - 6'24 ;
             end
          endcase
       end
