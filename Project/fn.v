@@ -811,16 +811,20 @@ always @(posedge sw0 or negedge rst_n) begin
 end
 
 reg   [1:0]   o_position      ;
-always @(posedge sw1 or negedge rst_n) begin
+always @(posedge sw1 or negedge rst_n or negedge sw0) begin
    if(rst_n == 1'b0) begin
       o_position <= POS_SEC;
-   end else begin
-      if(o_position >= POS_HOU) begin
-         o_position <= POS_SEC;
-      end else begin
-         o_position <= o_position + 1'b1;
-      end
-   end
+   end else begin 
+		  if(sw0 == 1'b0) begin
+			 o_position <= POS_SEC;
+			end else begin
+        if(o_position >= POS_HOU) begin
+            o_position <= POS_SEC;
+          end else begin
+            o_position <= o_position + 2'b1;
+          end 
+         end
+    end
 end
 
 reg      o_alarm_en      ;
