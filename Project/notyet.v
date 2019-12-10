@@ -1198,7 +1198,7 @@ always @(*) begin
                o_stwat_sec_clk = 1'b0;
                o_stwat_min_clk = 1'b0;
             end
-				CNTDWN_PAUSE : begin
+	    CNTDWN_PAUSE : begin
                o_sec_clk = clk_1hz;
                o_min_clk = i_max_hit_sec;
                o_hou_clk = i_max_hit_min;
@@ -1213,8 +1213,8 @@ always @(*) begin
                o_stwat_min_clk = 1'b0;
             end
          endcase
-			if (sw7 == 1'b0) begin
-				case(o_timer_en)
+	 if (sw7 == 1'b0) begin
+	case(o_timer_en)
             CNTDWN_GODWN : begin
                o_sec_clk = clk_1hz;
                o_min_clk = i_max_hit_sec;
@@ -1229,7 +1229,7 @@ always @(*) begin
                o_stwat_sec_clk = 1'b0;
                o_stwat_min_clk = 1'b0;
             end
-				CNTDWN_PAUSE : begin
+	    CNTDWN_PAUSE : begin
                o_sec_clk = clk_1hz;
                o_min_clk = i_max_hit_sec;
                o_hou_clk = i_max_hit_min;
@@ -1245,7 +1245,7 @@ always @(*) begin
             end
          endcase		
       end
-	end
+   end
       MODE_STWAT : begin
          case(o_stwat_en)
             CNTUP_RESET : begin
