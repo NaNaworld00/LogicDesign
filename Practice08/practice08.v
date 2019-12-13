@@ -39,7 +39,7 @@ always @(posedge clk or negedge rst_n) begin
 		o_gen_clk	<= 1'd0	;
 	end else begin
 		if(cnt >= i_nco_num/2-1) begin
-			cnt 	<= 32'd0;
+			cnt 		<= 32'd0;
 			o_gen_clk	<= ~o_gen_clk;
 		end else begin
 			cnt <= cnt + 1'b1;
@@ -84,9 +84,9 @@ endmodule
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
 module	double_fig_sep(
-		o_left,
-		o_right,
-		i_double_fig);
+			o_left,
+			o_right,
+			i_double_fig);
 
 output	[3:0]	o_left		;
 output	[3:0]	o_right		;
@@ -205,6 +205,7 @@ input		rst_n			;
 
 reg	[5:0]	o_hms_cnt		;
 reg		o_max_hit		;
+	
 always @(posedge clk or negedge rst_n) begin
 	if(rst_n == 1'b0) begin
 		o_hms_cnt <= 6'd0;
@@ -530,7 +531,7 @@ module	buzz(
 		o_buzz,
 		i_buzz_en,
 		clk,
-		rst_n);
+		rst_n	);
 
 output		o_buzz		;
 
@@ -599,10 +600,10 @@ end
 
 wire		buzz		;
 nco	u_nco_buzz(	
-		.o_gen_clk	( buzz		),
-		.i_nco_num	( nco_num	),
-		.clk		( clk		),
-		.rst_n		( rst_n		));
+			.o_gen_clk	( buzz		),
+			.i_nco_num	( nco_num	),
+			.clk		( clk		),
+			.rst_n		( rst_n		));
 
 assign		o_buzz = buzz & i_buzz_en;
 
@@ -640,7 +641,7 @@ wire		sec_clk		;
 wire		min_clk		;
 wire		alarm_sec_clk	;
 wire		alarm_min_clk	;
-wire		position			;
+wire		position	;
 
 controller	u_controller(
 		.o_mode( mode		),
