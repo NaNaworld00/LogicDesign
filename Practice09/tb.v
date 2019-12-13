@@ -13,7 +13,7 @@
 //	--------------------------------------------------
 //	PURPOSE			: Seven-Segment Display
 //	==================================================
-`timescale		1ns/1ns
+`timescale	1ns/1ns
 module	tb;
 
 
@@ -31,12 +31,12 @@ wire	[5:0]	o_seg_enb	;
 wire		o_seg_dp	;
 wire	[6:0]	o_seg		;
 top		dut(
-		.o_seg_enb	(o_seg_enb	),
-		.o_seg_dp	(o_seg_dp	),
-		.o_seg		(o_seg		),
-		.i_ir_rxb	(i_ir_rxb	),
-		.clk		(clk		),
-		.rst_n		(rst_n		));
+		.o_seg_enb	( o_seg_enb	),
+		.o_seg_dp	( o_seg_dp	),
+		.o_seg		( o_seg		),
+		.i_ir_rxb	( i_ir_rxb	),
+		.clk		( clk		),
+		.rst_n		( rst_n		));
 
 initial begin
 	#(0*tCK)	rst_n	= 1'b0;	i_ir_rxb = 1'b0;
