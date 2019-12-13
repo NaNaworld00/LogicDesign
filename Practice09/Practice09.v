@@ -21,7 +21,7 @@ module	nco(
 		o_gen_clk,
 		i_nco_num,
 		clk,
-		rst_n);
+		rst_n		);
 
 output		o_gen_clk	;	// 1Hz CLK
 
@@ -38,7 +38,7 @@ always @(posedge clk or negedge rst_n) begin
 		o_gen_clk	<= 1'd0	;
 	end else begin
 		if(cnt >= i_nco_num/2-1) begin
-			cnt 	<= 32'd0;
+			cnt 		<= 32'd0;
 			o_gen_clk	<= ~o_gen_clk;
 		end else begin
 			cnt <= cnt + 1'b1;
@@ -89,9 +89,9 @@ endmodule
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
 module	double_fig_sep(
-		o_left,
-		o_right,
-		i_double_fig);
+			o_left,
+			o_right,
+			i_double_fig	);
 
 output	[3:0]	o_left		;
 output	[3:0]	o_right		;
@@ -198,7 +198,7 @@ module	ir_rx(
 		o_data,
 		i_ir_rxb,
 		clk,
-		rst_n);
+		rst_n	);
 
 output	[31:0]	o_data		;
 
@@ -211,7 +211,7 @@ parameter	LEADCODE	= 2'b01	;	// 9ms high 4.5ms low
 parameter	DATACODE	= 2'b10	;	// Custom & Data Code
 parameter	COMPLETE	= 2'b11	;	// 32-bit data
 
-//		1M Clock = 1 us Reference Time
+//	1M Clock = 1 us Reference Time
 wire		clk_1M				;
 nco		u_nco(
 		.o_gen_clk	( clk_1M	),
@@ -219,10 +219,10 @@ nco		u_nco(
 		.clk		( clk		),
 		.rst_n		( rst_n		));
 
-//		Sequential Rx Bits
+//	Sequential Rx Bits
 
-wire		ir_rx		;
-assign		ir_rx = ~i_ir_rxb;
+wire		ir_rx			;
+assign		ir_rx = ~i_ir_rxb	;
 
 reg	[1:0]	seq_rx				;
 always @(posedge clk_1M or negedge rst_n) begin
@@ -233,7 +233,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 
-//		Count Signal Polarity (High & Low)
+//	Count Signal Polarity (High & Low)
 reg	[15:0]	cnt_h		;
 reg	[15:0]	cnt_l		;
 always @(posedge clk_1M or negedge rst_n) begin
@@ -252,7 +252,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 
-//		State Machine
+//	State Machine
 reg	[1:0]	state		;
 reg	[5:0]	cnt32		;
 always @(posedge clk_1M or negedge rst_n) begin
@@ -289,7 +289,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 
-//		32bit Custom & Data Code
+//	32bit Custom & Data Code
 reg	[31:0]	data		;
 reg	[31:0]	o_data		;
 always @(posedge clk_1M or negedge rst_n) begin
