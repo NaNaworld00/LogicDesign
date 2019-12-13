@@ -39,8 +39,8 @@ always @(posedge clk or negedge rst_n) begin
 		o_gen_clk	<= 1'd0	;
 	end else begin
 		if(cnt >= i_nco_num/2-1) begin
-			cnt 	<= 32'd0;
-			o_gen_clk	<= ~o_gen_clk;
+			cnt 	  <= 32'd0;
+			o_gen_clk <= ~o_gen_clk;
 		end else begin
 			cnt <= cnt + 1'b1;
 		end
@@ -84,9 +84,9 @@ endmodule
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
 module	double_fig_sep(
-		o_left,
-		o_right,
-		i_double_fig);
+			o_left,
+			o_right,
+			i_double_fig);
 
 output	[3:0]	o_left		;
 output	[3:0]	o_right		;
@@ -202,6 +202,7 @@ input		rst_n			;
 
 reg	[5:0]	o_hms_cnt		;
 reg		o_max_hit		;
+	
 always @(posedge clk or negedge rst_n) begin
 	if(rst_n == 1'b0) begin
 		o_hms_cnt <= 6'd0;
@@ -229,11 +230,13 @@ input		i_sw			;
 input		clk			;
 
 reg		dly1_sw			;
+	
 always @(posedge clk) begin
 	dly1_sw <= i_sw;
 end
 
 reg		dly2_sw			;
+	
 always @(posedge clk) begin
 	dly2_sw <= dly1_sw;
 end
@@ -415,6 +418,7 @@ input		rst_n	;
 
 wire	max_hit_sec;
 wire	max_hit_min;
+	
 controller	u_ctrl(
 		.o_mode		( 		),
 		.o_position	(		), 
