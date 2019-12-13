@@ -12,8 +12,8 @@ initial clk = 1'b0;
 always #(tCK/2) clk = ~clk;
 
 cnt6 dut(      .out      ( out ), 
-	       .clk ( clk ), 
-	       .rst_n ( rst_n ));
+	       .clk 	 ( clk ), 
+	       .rst_n 	 ( rst_n ));
 
 initial begin 
 #(0*tCK) rst_n = 1'b0; 
